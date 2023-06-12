@@ -1,0 +1,40 @@
+function main() {
+  input();
+}
+
+function output() {
+  var array = [];
+
+  /* double extraCash = getPayAmmount(allDebt, totalToPay);
+	   for (int i = 0; i < allDebt.size(); i++) {
+		   System.out.println(allDebt.get(i));
+		   if(extraCash > 0) { //if there is extra money
+			   if(i == 0)
+				   System.out.println("Pay: " + (allDebt.get(i).getOwedMonthly() + extraCash));
+			   else
+				   System.out.println("Pay: " + allDebt.get(i).getOwedMonthly());
+		   }
+		   else if(extraCash < 0) { //not enough to pay debts
+			   System.out.println("Error");
+		   }
+		   else { //perfect ammount to pay debts
+			   System.out.println("Pay: " + allDebt.get(i).getOwedMonthly());
+		   }
+	}
+   }
+*/
+  
+}
+
+function input() {
+  var name = in1.value;
+  var interest = in2.value;
+  var monthlyPayment = in3.value;
+  var totalAmount = in4.value;
+  const Debt = new Object();
+  alert(name, interest, monthlyPayment, totalAmount);
+  Debt.name = name;
+  Debt.interest = interest;
+  Debt.monthlyPayment = monthlyPayment;
+  Debt.totalAmount = totalAmount;
+}

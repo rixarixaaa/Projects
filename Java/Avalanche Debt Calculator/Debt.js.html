@@ -1,0 +1,63 @@
+// Generated JS from Java: Debt -----
+function Debt() {
+    this.debtName = null;
+    this.interest = 0.0;
+    this.owedMonthly = 0.0;
+    this.totalOwed = 0.0;
+
+    if (arguments.length == 0) {
+        Debt.call(this, "Null", -1, -1, -1);
+    }
+    else if (arguments.length == 4) {
+        var dname = arguments[0];
+        var intrst = arguments[1];
+        var monthly = arguments[2];
+        var total = arguments[3];
+        jv_Object.call(this);
+        this._DebtInit();
+        this.debtName = dname;
+        this.interest = intrst;
+        this.owedMonthly = monthly;
+        this.totalOwed = total;
+    }}
+
+var Debt_c = sc_newClass("Debt", Debt, jv_Object, [jv_Comparable]);
+
+Debt_c.toString = function ()  {
+    if (this.hasOwnProperty("$protoName")) {
+        return jv_Class_c.toString.apply(this, arguments);
+    }
+    var threeZeros = new java_text_DecimalFormat("#0.000");
+    var twoZeros = new java_text_DecimalFormat("#0.00");
+    return "Owed To: " + this.debtName + " Interest: " + threeZeros.format(this.interest) + "% Total Owed: " + twoZeros.format(this.totalOwed) + " Monthly Owed: " + twoZeros.format(this.owedMonthly);
+};
+Debt_c.getDebtName = function ()  {
+    return this.debtName;
+};
+Debt_c.getInterest = function ()  {
+    return this.interest;
+};
+Debt_c.getTotalOwed = function ()  {
+    return this.owedMonthly;
+};
+Debt_c.getOwedMonthly = function ()  {
+    return this.owedMonthly;
+};
+Debt_c.compareTo = function (o)  {
+    return Number_c.compare(this.interest, o.getInterest());
+};
+Debt_c.setDebtName = function (debtName)  {
+    this.debtName = debtName;
+};
+Debt_c.setInterest = function (interest)  {
+    this.interest = interest;
+};
+Debt_c.setOwedMonthly = function (owed)  {
+    this.owedMonthly = owed;
+};
+Debt_c.setTotalOwed = function (total)  {
+    this.owedMonthly = total;
+};
+
+Debt_c._DebtInit = function() {
+};

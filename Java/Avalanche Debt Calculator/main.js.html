@@ -1,0 +1,50 @@
+class main {}
+main.main = (args) => {
+  let allDebts = new ArrayList();
+  let in = new Scanner(System.in);
+  System.out.println('Amount for bills: ');
+  let amtForBills = in.nextDouble();
+  while (in.hasNext()) {
+    allDebts.add(this.getInput());
+  }
+  Collections.sort(allDebts);
+  Collections.reverse(allDebts);
+  this.output(allDebts, amtForBills);
+};
+main.getInput = () => {
+  let input = new Scanner(System.in);
+  System.out.println('Name');
+  let inputName = input.nextLine();
+  System.out.println('interest');
+  let interest = input.nextDouble();
+  System.out.println('monthly');
+  let monthlyAmmount = input.nextDouble();
+  System.out.println('total');
+  let totalAmmount = input.nextDouble();
+  return new Debt(inputName, interest, monthlyAmmount, totalAmmount);
+};
+main.getPayAmmount = (allDebt, totalToPay) => {
+  for (let i = 0; i < allDebt.size(); i++) {
+    totalToPay -= allDebt.get(i).getOwedMonthly();
+  }
+  return totalToPay;
+};
+main.output = (allDebt, totalToPay) => {
+  let extraCash = this.getPayAmmount(allDebt, totalToPay);
+  for (let i = 0; i < allDebt.size(); i++) {
+    System.out.println(allDebt.get(i));
+    if (extraCash > 0) {
+      if (i === 0) {
+        System.out.println('Pay: ' + (allDebt.get(i).getOwedMonthly() + extraCash));
+      } else {
+        System.out.println('Pay: ' + allDebt.get(i).getOwedMonthly());
+      }
+    } else {
+      if (extraCash < 0) {
+        System.out.println('Error');
+      } else {
+        System.out.println('Pay: ' + allDebt.get(i).getOwedMonthly());
+      }
+    }
+  }
+}
