@@ -1,2 +1,2 @@
-# Projects
-Selection of my programming projects throughout the years!
+# C++
+Selection of my C++ projects throughout the years!
