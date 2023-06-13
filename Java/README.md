@@ -1,2 +1,2 @@
-# Projects
-Selection of my programming projects throughout the years!
+# Java
+Selection of my Java projects throughout the years!
