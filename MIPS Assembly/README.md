@@ -1,2 +1,2 @@
-# Projects
-Selection of my programming projects throughout the years!
+# MIPS Assembly
+Selection of my MIPS Assembly projects throughout the years!
